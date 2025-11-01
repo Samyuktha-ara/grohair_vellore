@@ -30,7 +30,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -50,7 +50,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -162,8 +162,9 @@
               <input type="email" class="form-control" id="email" placeholder="Email Address *" required>
             </div>
             <div class="mb-3">
-              <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Your Phone Number *"
-                required />
+              <input type="tel" class="form-control" pattern="\d{10}" inputmode="numeric" maxlength="10"
+                title="Please enter a valid 10-digit phone number" id="mobile" name="mobile"
+                placeholder="Your Phone Number *" required />
             </div>
 
             <div class="mb-3">

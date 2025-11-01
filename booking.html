@@ -162,7 +162,8 @@
         <input type="text" class="book-input" name="lastName" placeholder="Last Name" required />
 
         <input type="email" class="book-input" name="email" placeholder="Your Email" required />
-        <input type="tel" class="book-input" name="phone" placeholder="Your Phone Number" required />
+        <input type="tel" class="book-input" name="phone" pattern="\d{10}" inputmode="numeric" maxlength="10"
+                title="Please enter a valid 10-digit phone number" placeholder="Your Phone Number" required />
         <input type="date" class="book-input" name="date" id="appointmentDate" required />
 
         <select class="book-select" name="timeSlot" required>

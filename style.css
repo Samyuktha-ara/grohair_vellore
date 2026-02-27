@@ -1404,8 +1404,15 @@ input[type="date"]::placeholder {
 }
 
 .book-select option {
-  background-color: #000 !important;           /* Forces dark dropdown list */
+  background-color: #000 !important;
   color: #fff !important;
+}
+
+.book-select optgroup {
+  background-color: #111 !important;
+  color: #ff2f3b !important;
+  font-weight: 600;
+  font-style: normal;
 }
 
     @media (max-width: 600px) {
@@ -1461,4 +1468,120 @@ input[type="date"]::placeholder {
   background-color: #a71d2a !important;
   color: #fff;
   text-decoration: none;
+}
+
+
+/* Contact Info Cards ------------------------------------------------------- */
+
+.contact-cards-section {
+  padding: 50px 20px;
+  background: #f5f7fa;
+}
+
+.contact-cards-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  flex: 1 1 280px;
+  max-width: 340px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contact-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #EA2127;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.contact-card h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.contact-card a,
+.contact-card p {
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-card a:hover {
+  color: #EA2127;
+}
+
+@media (max-width: 600px) {
+  .contact-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-card {
+    max-width: 100%;
+  }
+}
+
+/* Fixed WhatsApp & Call Buttons -------------------------------------------- */
+
+.fixed-contact-btns {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.fixed-contact-btns a {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-contact-btns a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.fixed-btn-whatsapp {
+  background: #25D366;
+}
+
+.fixed-btn-call {
+  background: #EA2127;
 }

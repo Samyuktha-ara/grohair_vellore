@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -128,10 +128,10 @@
           <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="booking.html">Contact</a></li>
         </ul>
         <div class="d-flex">
-          <a href="booking.html" class="btn btn-outline-dark me-2">Book Your Session</a>
+          <a href="booking.html" class="btn btn-outline-dark me-2">Book an Appointment</a>
         </div>
       </div>
     </div>
@@ -139,105 +139,93 @@
 
 
 
-  <div class="container py-5">
-    <div class="row g-4 align-items-center">
+  <div class="book-top-tag">
+    <span>Contact</span>
+    <h1>Get In Touch</h1>
+  </div>
 
-      <!-- Contact Form -->
-      <div class="col-lg-6">
-        <div class="contact-form">
-          <small class="text-danger fw-semibold">Get in Touch</small>
-          <h2 class="fw-bold my-2">Let's Chat, Reach Out to Us</h2>
-          <p class="text-muted">Have questions or feedback? We're here to help. Send us a message, and we’ll respond
-            within 24 hours.</p>
-          <form id="appointmentForm">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" id="firstName" placeholder="First Name *" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name *" required>
-              </div>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" id="email" placeholder="Email Address *" required>
-            </div>
-            <div class="mb-3">
-              <input type="tel" class="form-control" pattern="\d{10}" inputmode="numeric" maxlength="10"
-                title="Please enter a valid 10-digit phone number" id="mobile" name="mobile"
-                placeholder="Your Phone Number *" required />
-            </div>
-
-            <div class="mb-3">
-              <input type="date" class="form-control" id="appointmentDate" required>
-            </div>
-            <div class="mb-3">
-              <select class="form-control" id="appointmentTime" required>
-                <option value="">Select Time Slot</option>
-                <option>8 AM - 9 AM</option>
-                <option>9 AM - 10 AM</option>
-                <option>10 AM - 11 AM</option>
-                <option>11 AM - 12 PM</option>
-                <option>12 PM - 1 PM</option>
-                <option>1 PM - 2 PM</option>
-                <option>2 PM - 3 PM</option>
-                <option>3 PM - 4 PM</option>
-                <option>4 PM - 5 PM</option>
-                <option>5 PM - 6 PM</option>
-                <option>6 PM - 7 PM</option>
-                <option>7 PM - 8 PM</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" id="message" placeholder="Leave us a message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-outline-dark w-100 py-2" onclick="gtag_report_conversion();">Send
-              Message</button>
-          </form>
+  <section class="container book-section">
+    <div class="book-form-wrapper" style="max-width: 700px;">
+      <h2>Send Us a Message</h2>
+      <form id="appointmentForm" class="book-form">
+        <input type="text" class="book-input" id="firstName" placeholder="First Name *" required />
+        <input type="text" class="book-input" id="lastName" placeholder="Last Name *" required />
+        <input type="email" class="book-input" id="email" placeholder="Email Address *" required />
+        <input type="tel" class="book-input" id="mobile" name="mobile" pattern="\d{10}" inputmode="numeric"
+          maxlength="10" title="Please enter a valid 10-digit phone number" placeholder="Your Phone Number *"
+          required />
+        <input type="date" class="book-input" id="appointmentDate" required />
+        <select class="book-select" id="appointmentTime" required>
+          <option value="" disabled selected>Select Time Slot</option>
+          <option value="8-9">8:00 AM - 9:00 AM</option>
+          <option value="9-10">9:00 AM - 10:00 AM</option>
+          <option value="10-11">10:00 AM - 11:00 AM</option>
+          <option value="11-12">11:00 AM - 12:00 PM</option>
+          <option value="12-13">12:00 PM - 1:00 PM</option>
+          <option value="13-14">1:00 PM - 2:00 PM</option>
+          <option value="14-15">2:00 PM - 3:00 PM</option>
+          <option value="15-16">3:00 PM - 4:00 PM</option>
+          <option value="16-17">4:00 PM - 5:00 PM</option>
+          <option value="17-18">5:00 PM - 6:00 PM</option>
+          <option value="18-19">6:00 PM - 7:00 PM</option>
+          <option value="19-20">7:00 PM - 8:00 PM</option>
+        </select>
+        <select class="book-select" id="treatment" name="treatment" required>
+          <option value="" disabled selected>Select Treatment</option>
+          <optgroup label="Hair Care">
+            <option value="eyebrow-transplant">Eyebrow Transplant</option>
+            <option value="stem-x-pro">Stem X Pro</option>
+            <option value="mesotherapy">Mesotherapy</option>
+            <option value="oxygen-laser-therapy">Oxygen Laser Therapy</option>
+            <option value="scalp-micropigmentation">Scalp Micropigmentation</option>
+            <option value="hair-transplant">Hair Transplant</option>
+            <option value="regenpro9-gfc-therapy">RegenPro9 – GFC Therapy</option>
+          </optgroup>
+          <optgroup label="Skin Care">
+            <option value="microblading">Microblading</option>
+            <option value="wart-removal">Wart Removal</option>
+            <option value="laser-hair-reduction">Laser Hair Reduction</option>
+            <option value="hydrafacial">Hydrafacial</option>
+            <option value="q-switch">Q-Switch</option>
+            <option value="skin-brightening">Skin Brightening</option>
+            <option value="rf-anti-aging-facial">RF Anti-Aging Facial</option>
+            <option value="wrinkle-reduction-therapy">Wrinkle Reduction Therapy</option>
+          </optgroup>
+        </select>
+        <div class="book-button-wrapper">
+          <button type="submit" class="book-btn" onclick="gtag_report_conversion();">Send Message</button>
         </div>
-      </div>
-
-      <!-- Contact Info + Image -->
-      <div class="col-lg-6">
-        <div class="contact-info">
-          <img src="assets/images/about.jpg" alt="Contact Us Image" class="mb-4 rounded">
-
-          <div class="info-box d-flex align-items-center">
-            <div class="me-3 fs-4 text-danger">
-              <i class="bi bi-envelope-fill text-danger"></i>
-            </div>
-            <div>
-              <strong>Email</strong><br>
-              <small>vellore@adgrohair.com</small>
-            </div>
-          </div>
-
-          <div class="info-box d-flex align-items-center">
-            <div class="me-3 fs-4 text-danger">
-              <i class="bi bi-telephone-fill text-danger"></i>
-            </div>
-            <div>
-              <strong>Phone</strong><br>
-              <small>+91 75718 56789</small>
-            </div>
-          </div>
-
-          <div class="info-box d-flex align-items-center">
-            <div class="me-3 fs-4 text-danger">
-              <i class="bi bi-geo-alt-fill text-danger"></i>
-            </div>
-            <div>
-              <strong>Location</strong><br>
-              <small>#133/1, RPM Street, Sankaranpalayam, Vellore - 632 001 (Landmark: Opposite to Reliance
-                Smart)</small>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
+      </form>
 
     </div>
-  </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="contact-cards-section">
+    <div class="contact-cards-container">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h4>Phone</h4>
+        <a href="tel:+917571856789">+91 75718 56789</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h4>Email</h4>
+        <a href="mailto:vellore@adgrohair.com">vellore@adgrohair.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h4>Address</h4>
+        <p>#133/1, RPM Street, Sankaranpalayam, Vellore - 632 001 (Landmark: Opposite to Reliance Smart)</p>
+      </div>
+    </div>
+  </section>
   <!-- Footer Start -->
   <section class="grofooter-section">
     <div class="grofooter-container">
@@ -280,7 +268,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="booking.html">Contact</a>
         <!-- <a href="#">Testimonials</a> -->
         <!-- <a href="#">FAQs</a> -->
       </div>
@@ -322,7 +310,7 @@
         phone: document.getElementById("mobile").value.trim(),
         date: document.getElementById("appointmentDate").value,
         time: document.getElementById("appointmentTime").value,
-        message: document.getElementById("message").value.trim()
+        treatment: document.getElementById("treatment").value
       };
 
       console.log("Data being sent:", data);
@@ -368,6 +356,17 @@
       dateInput.setAttribute("min", today);
     });
   </script>
+
+<!-- Fixed WhatsApp & Call Buttons -->
+<div class="fixed-contact-btns">
+  <a href="https://wa.me/917571856789" target="_blank" class="fixed-btn-whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+917571856789" class="fixed-btn-call" aria-label="Call">
+    <i class="fas fa-phone"></i>
+  </a>
+</div>
+
 </body>
 
 </html>
